@@ -38,40 +38,40 @@
     <main class="content">
         <article>
             <h1>Getting Started with Documentation</h1>
-            <h1 id="getting-started-with-documentation" tabindex="-1">Getting Started with Documentation</h1>
+            <h1 id="getting-started-with-documentation" tabindex="-1">Getting Started with Documentation <a class="anchor" href="#getting-started-with-documentation">#</a></h1>
 <p>This guide will help you understand how to write and organize documentation in this system.</p>
-<h2 id="writing-documentation" tabindex="-1">Writing Documentation</h2>
-<h3 id="markdown-basics" tabindex="-1">Markdown Basics</h3>
+<h2 id="writing-documentation" tabindex="-1">Writing Documentation <a class="anchor" href="#writing-documentation">#</a></h2>
+<h3 id="markdown-basics" tabindex="-1">Markdown Basics <a class="anchor" href="#markdown-basics">#</a></h3>
 <p>Your documentation should be written in Markdown format. Here are some common syntax examples:</p>
-<pre><code class="language-markdown"># Heading 1
-## Heading 2
-### Heading 3
-#### HEading 4
+<pre class="language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> Heading 1</span>
+<span class="token title important"><span class="token punctuation">##</span> Heading 2</span>
+<span class="token title important"><span class="token punctuation">###</span> Heading 3</span>
+<span class="token title important"><span class="token punctuation">####</span> HEading 4</span>
 
-- Bullet points
-- Another point
-  - Nested point
+<span class="token list punctuation">-</span> Bullet points
+<span class="token list punctuation">-</span> Another point
+  <span class="token list punctuation">-</span> Nested point
 
-1. Numbered list
-2. Second item
+<span class="token list punctuation">1.</span> Numbered list
+<span class="token list punctuation">2.</span> Second item
 
-**Bold text**
-*Italic text*
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">Bold text</span><span class="token punctuation">**</span></span>
+<span class="token italic"><span class="token punctuation">*</span><span class="token content">Italic text</span><span class="token punctuation">*</span></span>
 
-[Link text](url)
+<span class="token url">[<span class="token content">Link text</span>](<span class="token url">url</span>)</span>
 </code></pre>
-<h3 id="code-blocks" tabindex="-1">Code Blocks</h3>
+<h3 id="code-blocks" tabindex="-1">Code Blocks <a class="anchor" href="#code-blocks">#</a></h3>
 <p>You can include code blocks with syntax highlighting:</p>
-<pre><code class="language-javascript">function example() {
-    console.log(&quot;Hello, documentation!&quot;);
-}
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello, documentation!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<pre><code class="language-python">def example():
-    print(&quot;Hello, documentation!&quot;)
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello, documentation!"</span><span class="token punctuation">)</span>
 </code></pre>
-<h3 id="file-organization" tabindex="-1">File Organization</h3>
+<h3 id="file-organization" tabindex="-1">File Organization <a class="anchor" href="#file-organization">#</a></h3>
 <p>Place your documentation files in appropriate directories under <code>docs/content/</code>:</p>
-<pre><code>docs/
+<pre class="language-plaintext"><code class="language-plaintext">docs/
 ├── content/
 │   ├── guides/      # Tutorial and how-to content
 │   ├── reference/   # API and technical reference
@@ -79,12 +79,12 @@
 └── assets/
     └── images/      # Images and other media
 </code></pre>
-<h2 id="using-pandoc" tabindex="-1">Using Pandoc</h2>
+<h2 id="using-pandoc" tabindex="-1">Using Pandoc <a class="anchor" href="#using-pandoc">#</a></h2>
 <p>To convert other file formats to Markdown, use the convert script:</p>
-<pre><code class="language-bash">npm run convert your-file.docx
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> run convert your-file.docx
 </code></pre>
 <p>This will automatically convert your file to Markdown and place it in the correct directory.</p>
-<h2 id="building-and-previewing" tabindex="-1">Building and Previewing</h2>
+<h2 id="building-and-previewing" tabindex="-1">Building and Previewing <a class="anchor" href="#building-and-previewing">#</a></h2>
 <p>To preview your documentation locally:</p>
 <ol>
 <li>Run <code>npm run serve</code></li>

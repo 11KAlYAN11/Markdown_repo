@@ -38,140 +38,140 @@
     <main class="content">
         <article>
             <h1>C++ Programming Guide</h1>
-            <h1 id="c%2B%2B-programming-guide" tabindex="-1">C++ Programming Guide</h1>
-<h2 id="introduction-to-c%2B%2B" tabindex="-1">Introduction to C++</h2>
-<p>C++ is a powerful general-purpose programming language that extends C with object-oriented features. It's widely used in game development, system programming, and performance-critical applications.</p>
-<h2 id="core-features" tabindex="-1">Core Features</h2>
-<h3 id="1.-classes-and-objects" tabindex="-1">1. Classes and Objects</h3>
-<pre><code class="language-cpp">// Class definition
-class Person {
-private:
-    string name;
-    int age;
+            <h1 id="c%2B%2B-programming-guide" tabindex="-1">C++ Programming Guide <a class="anchor" href="#c%2B%2B-programming-guide">#</a></h1>
+<h2 id="introduction-to-c%2B%2B" tabindex="-1">Introduction to C++ <a class="anchor" href="#introduction-to-c%2B%2B">#</a></h2>
+<p>C++ is a powerful general-purpose programming language that extends C with object-oriented features. It’s widely used in game development, system programming, and performance-critical applications.</p>
+<h2 id="core-features" tabindex="-1">Core Features <a class="anchor" href="#core-features">#</a></h2>
+<h3 id="1.-classes-and-objects" tabindex="-1">1. Classes and Objects <a class="anchor" href="#1.-classes-and-objects">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token comment">// Class definition</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    string name<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
     
-public:
-    // Constructor
-    Person(string n, int a) : name(n), age(a) {}
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// Constructor</span>
+    <span class="token function">Person</span><span class="token punctuation">(</span>string n<span class="token punctuation">,</span> <span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">name</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">age</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     
-    // Member functions
-    void displayInfo() const {
-        cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; &quot;, Age: &quot; &lt;&lt; age &lt;&lt; endl;
-    }
+    <span class="token comment">// Member functions</span>
+    <span class="token keyword">void</span> <span class="token function">displayInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Name: "</span> <span class="token operator">&lt;&lt;</span> name <span class="token operator">&lt;&lt;</span> <span class="token string">", Age: "</span> <span class="token operator">&lt;&lt;</span> age <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    // Getter and setter
-    int getAge() const { return age; }
-    void setAge(int a) { age = a; }
-};
+    <span class="token comment">// Getter and setter</span>
+    <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> age<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span> age <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-// Using the class
-Person person(&quot;Alice&quot;, 25);
-person.displayInfo();
+<span class="token comment">// Using the class</span>
+Person <span class="token function">person</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+person<span class="token punctuation">.</span><span class="token function">displayInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-templates" tabindex="-1">2. Templates</h3>
-<pre><code class="language-cpp">// Function template
-template&lt;typename T&gt;
-T max(T a, T b) {
-    return (a &gt; b) ? a : b;
-}
+<h3 id="2.-templates" tabindex="-1">2. Templates <a class="anchor" href="#2.-templates">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token comment">// Function template</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span>
+T <span class="token function">max</span><span class="token punctuation">(</span>T a<span class="token punctuation">,</span> T b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">></span> b<span class="token punctuation">)</span> <span class="token operator">?</span> a <span class="token operator">:</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// Class template
-template&lt;typename T&gt;
-class Stack {
-private:
-    vector&lt;T&gt; elements;
+<span class="token comment">// Class template</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span>
+<span class="token keyword">class</span> <span class="token class-name">Stack</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span>T<span class="token operator">></span> elements<span class="token punctuation">;</span>
     
-public:
-    void push(T const&amp; elem) {
-        elements.push_back(elem);
-    }
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span>T <span class="token keyword">const</span><span class="token operator">&amp;</span> elem<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        elements<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    T pop() {
-        T top = elements.back();
-        elements.pop_back();
-        return top;
-    }
-};
+    T <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        T top <span class="token operator">=</span> elements<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        elements<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> top<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="3.-stl-containers" tabindex="-1">3. STL Containers</h3>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-#include &lt;map&gt;
-#include &lt;string&gt;
+<h3 id="3.-stl-containers" tabindex="-1">3. STL Containers <a class="anchor" href="#3.-stl-containers">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;map></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
 
-// Vector usage
-vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
-numbers.push_back(6);
+<span class="token comment">// Vector usage</span>
+vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+numbers<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Map usage
-map&lt;string, int&gt; ages;
-ages[&quot;Alice&quot;] = 25;
-ages[&quot;Bob&quot;] = 30;
+<span class="token comment">// Map usage</span>
+map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> ages<span class="token punctuation">;</span>
+ages<span class="token punctuation">[</span><span class="token string">"Alice"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+ages<span class="token punctuation">[</span><span class="token string">"Bob"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
 
-// Range-based for loop
-for (const auto&amp; pair : ages) {
-    cout &lt;&lt; pair.first &lt;&lt; &quot;: &quot; &lt;&lt; pair.second &lt;&lt; endl;
-}
+<span class="token comment">// Range-based for loop</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">auto</span><span class="token operator">&amp;</span> pair <span class="token operator">:</span> ages<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> pair<span class="token punctuation">.</span>first <span class="token operator">&lt;&lt;</span> <span class="token string">": "</span> <span class="token operator">&lt;&lt;</span> pair<span class="token punctuation">.</span>second <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="4.-smart-pointers" tabindex="-1">4. Smart Pointers</h3>
-<pre><code class="language-cpp">#include &lt;memory&gt;
+<h3 id="4.-smart-pointers" tabindex="-1">4. Smart Pointers <a class="anchor" href="#4.-smart-pointers">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;memory></span></span>
 
-// Unique pointer
-unique_ptr&lt;Person&gt; person1(new Person(&quot;Alice&quot;, 25));
-person1-&gt;displayInfo();
+<span class="token comment">// Unique pointer</span>
+unique_ptr<span class="token operator">&lt;</span>Person<span class="token operator">></span> <span class="token function">person1</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+person1<span class="token operator">-></span><span class="token function">displayInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Shared pointer
-shared_ptr&lt;Person&gt; person2 = make_shared&lt;Person&gt;(&quot;Bob&quot;, 30);
-shared_ptr&lt;Person&gt; person3 = person2;  // Reference count = 2
+<span class="token comment">// Shared pointer</span>
+shared_ptr<span class="token operator">&lt;</span>Person<span class="token operator">></span> person2 <span class="token operator">=</span> <span class="token generic-function"><span class="token function">make_shared</span><span class="token generic class-name"><span class="token operator">&lt;</span>Person<span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+shared_ptr<span class="token operator">&lt;</span>Person<span class="token operator">></span> person3 <span class="token operator">=</span> person2<span class="token punctuation">;</span>  <span class="token comment">// Reference count = 2</span>
 </code></pre>
-<h2 id="modern-c%2B%2B-features-(c%2B%2B11-and-beyond)" tabindex="-1">Modern C++ Features (C++11 and beyond)</h2>
-<h3 id="1.-auto-type-inference" tabindex="-1">1. Auto Type Inference</h3>
-<pre><code class="language-cpp">auto number = 42;        // int
-auto text = &quot;Hello&quot;;     // const char*
-auto pi = 3.14159;       // double
+<h2 id="modern-c%2B%2B-features-(c%2B%2B11-and-beyond)" tabindex="-1">Modern C++ Features (C++11 and beyond) <a class="anchor" href="#modern-c%2B%2B-features-(c%2B%2B11-and-beyond)">#</a></h2>
+<h3 id="1.-auto-type-inference" tabindex="-1">1. Auto Type Inference <a class="anchor" href="#1.-auto-type-inference">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token keyword">auto</span> number <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>        <span class="token comment">// int</span>
+<span class="token keyword">auto</span> text <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>     <span class="token comment">// const char*</span>
+<span class="token keyword">auto</span> pi <span class="token operator">=</span> <span class="token number">3.14159</span><span class="token punctuation">;</span>       <span class="token comment">// double</span>
 
-// With lambda expressions
-auto lambda = [](int x) { return x * x; };
+<span class="token comment">// With lambda expressions</span>
+<span class="token keyword">auto</span> lambda <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">*</span> x<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-lambda-expressions" tabindex="-1">2. Lambda Expressions</h3>
-<pre><code class="language-cpp">vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+<h3 id="2.-lambda-expressions" tabindex="-1">2. Lambda Expressions <a class="anchor" href="#2.-lambda-expressions">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-// Using lambda with algorithms
-auto sum = accumulate(numbers.begin(), numbers.end(), 0,
-    [](int total, int current) {
-        return total + current;
-    });
+<span class="token comment">// Using lambda with algorithms</span>
+<span class="token keyword">auto</span> sum <span class="token operator">=</span> <span class="token function">accumulate</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> numbers<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> total<span class="token punctuation">,</span> <span class="token keyword">int</span> current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> total <span class="token operator">+</span> current<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Capturing variables
-int multiplier = 10;
-auto multiply = [multiplier](int x) { return x * multiplier; };
+<span class="token comment">// Capturing variables</span>
+<span class="token keyword">int</span> multiplier <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">auto</span> multiply <span class="token operator">=</span> <span class="token punctuation">[</span>multiplier<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">*</span> multiplier<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="3.-move-semantics" tabindex="-1">3. Move Semantics</h3>
-<pre><code class="language-cpp">class Buffer {
-private:
-    int* data;
-    size_t size;
+<h3 id="3.-move-semantics" tabindex="-1">3. Move Semantics <a class="anchor" href="#3.-move-semantics">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Buffer</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span><span class="token operator">*</span> data<span class="token punctuation">;</span>
+    size_t size<span class="token punctuation">;</span>
 
-public:
-    // Move constructor
-    Buffer(Buffer&amp;&amp; other) noexcept 
-        : data(other.data), size(other.size) {
-        other.data = nullptr;
-        other.size = 0;
-    }
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// Move constructor</span>
+    <span class="token function">Buffer</span><span class="token punctuation">(</span>Buffer<span class="token operator">&amp;&amp;</span> other<span class="token punctuation">)</span> <span class="token keyword">noexcept</span> 
+        <span class="token operator">:</span> <span class="token function">data</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">size</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        other<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+        other<span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    // Move assignment operator
-    Buffer&amp; operator=(Buffer&amp;&amp; other) noexcept {
-        if (this != &amp;other) {
-            delete[] data;
-            data = other.data;
-            size = other.size;
-            other.data = nullptr;
-            other.size = 0;
-        }
-        return *this;
-    }
-};
+    <span class="token comment">// Move assignment operator</span>
+    Buffer<span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span>Buffer<span class="token operator">&amp;&amp;</span> other<span class="token punctuation">)</span> <span class="token keyword">noexcept</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">!=</span> <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">delete</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data<span class="token punctuation">;</span>
+            data <span class="token operator">=</span> other<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+            size <span class="token operator">=</span> other<span class="token punctuation">.</span>size<span class="token punctuation">;</span>
+            other<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+            other<span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<h2 id="best-practices" tabindex="-1">Best Practices <a class="anchor" href="#best-practices">#</a></h2>
 <ol>
 <li>Use RAII (Resource Acquisition Is Initialization)</li>
 <li>Prefer smart pointers over raw pointers</li>
@@ -179,51 +179,51 @@ public:
 <li>Leverage STL algorithms and containers</li>
 <li>Follow the Rule of Five/Zero</li>
 </ol>
-<h2 id="common-idioms" tabindex="-1">Common Idioms</h2>
-<h3 id="1.-raii-pattern" tabindex="-1">1. RAII Pattern</h3>
-<pre><code class="language-cpp">class FileHandler {
-private:
-    FILE* file;
+<h2 id="common-idioms" tabindex="-1">Common Idioms <a class="anchor" href="#common-idioms">#</a></h2>
+<h3 id="1.-raii-pattern" tabindex="-1">1. RAII Pattern <a class="anchor" href="#1.-raii-pattern">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">FileHandler</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    FILE<span class="token operator">*</span> file<span class="token punctuation">;</span>
     
-public:
-    FileHandler(const char* filename) {
-        file = fopen(filename, &quot;r&quot;);
-    }
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">FileHandler</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        file <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    ~FileHandler() {
-        if (file) {
-            fclose(file);
-        }
-    }
-};
+    <span class="token operator">~</span><span class="token function">FileHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">fclose</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-pimpl-idiom" tabindex="-1">2. Pimpl Idiom</h3>
-<pre><code class="language-cpp">// Header file
-class Widget {
-private:
-    class Impl;
-    unique_ptr&lt;Impl&gt; pimpl;
+<h3 id="2.-pimpl-idiom" tabindex="-1">2. Pimpl Idiom <a class="anchor" href="#2.-pimpl-idiom">#</a></h3>
+<pre class="language-cpp"><code class="language-cpp"><span class="token comment">// Header file</span>
+<span class="token keyword">class</span> <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Impl</span><span class="token punctuation">;</span>
+    unique_ptr<span class="token operator">&lt;</span>Impl<span class="token operator">></span> pimpl<span class="token punctuation">;</span>
     
-public:
-    Widget();
-    ~Widget();
-    void doSomething();
-};
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-// Implementation file
-class Widget::Impl {
-    // Implementation details
-};
+<span class="token comment">// Implementation file</span>
+<span class="token keyword">class</span> <span class="token class-name">Widget</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">Impl</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Implementation details</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="exception-handling" tabindex="-1">Exception Handling</h2>
-<pre><code class="language-cpp">try {
-    vector&lt;int&gt; vec;
-    vec.at(5) = 10;  // Will throw out_of_range
-} catch (const out_of_range&amp; e) {
-    cerr &lt;&lt; &quot;Out of range error: &quot; &lt;&lt; e.what() &lt;&lt; endl;
-} catch (...) {
-    cerr &lt;&lt; &quot;Unknown error occurred&quot; &lt;&lt; endl;
-}</code></pre>
+<h2 id="exception-handling" tabindex="-1">Exception Handling <a class="anchor" href="#exception-handling">#</a></h2>
+<pre class="language-cpp"><code class="language-cpp"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> vec<span class="token punctuation">;</span>
+    vec<span class="token punctuation">.</span><span class="token function">at</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>  <span class="token comment">// Will throw out_of_range</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token keyword">const</span> out_of_range<span class="token operator">&amp;</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cerr <span class="token operator">&lt;&lt;</span> <span class="token string">"Out of range error: "</span> <span class="token operator">&lt;&lt;</span> e<span class="token punctuation">.</span><span class="token function">what</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cerr <span class="token operator">&lt;&lt;</span> <span class="token string">"Unknown error occurred"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
         </article>
     </main>

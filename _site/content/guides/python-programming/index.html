@@ -38,211 +38,211 @@
     <main class="content">
         <article>
             <h1>Python Programming Guide</h1>
-            <h1 id="python-programming-guide" tabindex="-1">Python Programming Guide</h1>
-<h2 id="introduction-to-python" tabindex="-1">Introduction to Python</h2>
+            <h1 id="python-programming-guide" tabindex="-1">Python Programming Guide <a class="anchor" href="#python-programming-guide">#</a></h1>
+<h2 id="introduction-to-python" tabindex="-1">Introduction to Python <a class="anchor" href="#introduction-to-python">#</a></h2>
 <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It emphasizes code readability with its notable use of significant whitespace and supports multiple programming paradigms.</p>
-<h2 id="core-features" tabindex="-1">Core Features</h2>
-<h3 id="1.-basic-syntax-and-data-types" tabindex="-1">1. Basic Syntax and Data Types</h3>
-<pre><code class="language-python"># Variables and basic types
-name = &quot;Alice&quot;        # str
-age = 25             # int
-height = 1.75        # float
-is_student = True    # bool
+<h2 id="core-features" tabindex="-1">Core Features <a class="anchor" href="#core-features">#</a></h2>
+<h3 id="1.-basic-syntax-and-data-types" tabindex="-1">1. Basic Syntax and Data Types <a class="anchor" href="#1.-basic-syntax-and-data-types">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Variables and basic types</span>
+name <span class="token operator">=</span> <span class="token string">"Alice"</span>        <span class="token comment"># str</span>
+age <span class="token operator">=</span> <span class="token number">25</span>             <span class="token comment"># int</span>
+height <span class="token operator">=</span> <span class="token number">1.75</span>        <span class="token comment"># float</span>
+is_student <span class="token operator">=</span> <span class="token boolean">True</span>    <span class="token comment"># bool</span>
 
-# Lists
-numbers = [1, 2, 3, 4, 5]
-numbers.append(6)
-first_three = numbers[:3]  # Slicing
+<span class="token comment"># Lists</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+numbers<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+first_three <span class="token operator">=</span> numbers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># Slicing</span>
 
-# Dictionaries
-person = {
-    &quot;name&quot;: &quot;Alice&quot;,
-    &quot;age&quot;: 25,
-    &quot;skills&quot;: [&quot;Python&quot;, &quot;Data Science&quot;]
-}
+<span class="token comment"># Dictionaries</span>
+person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Alice"</span><span class="token punctuation">,</span>
+    <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+    <span class="token string">"skills"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"Python"</span><span class="token punctuation">,</span> <span class="token string">"Data Science"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2.-functions-and-lambda-expressions" tabindex="-1">2. Functions and Lambda Expressions</h3>
-<pre><code class="language-python"># Function definition
-def greet(name: str, greeting: str = &quot;Hello&quot;) -&gt; str:
-    &quot;&quot;&quot;
+<h3 id="2.-functions-and-lambda-expressions" tabindex="-1">2. Functions and Lambda Expressions <a class="anchor" href="#2.-functions-and-lambda-expressions">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Function definition</span>
+<span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> greeting<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
     Greet a person with a custom greeting.
     
     Args:
         name (str): Person's name
-        greeting (str): Greeting to use (default: &quot;Hello&quot;)
+        greeting (str): Greeting to use (default: "Hello")
     
     Returns:
         str: Complete greeting message
-    &quot;&quot;&quot;
-    return f&quot;{greeting}, {name}!&quot;
+    """</span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>greeting<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!"</span></span>
 
-# Lambda function
-square = lambda x: x ** 2
+<span class="token comment"># Lambda function</span>
+square <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">**</span> <span class="token number">2</span>
 
-# Higher-order functions
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(square, numbers))
-evens = list(filter(lambda x: x % 2 == 0, numbers))
+<span class="token comment"># Higher-order functions</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+squared <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>square<span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">)</span>
+evens <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<h3 id="3.-classes-and-objects" tabindex="-1">3. Classes and Objects</h3>
-<pre><code class="language-python">from dataclasses import dataclass
-from typing import List, Optional
+<h3 id="3.-classes-and-objects" tabindex="-1">3. Classes and Objects <a class="anchor" href="#3.-classes-and-objects">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> dataclasses <span class="token keyword">import</span> dataclass
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Optional
 
-@dataclass
-class Student:
-    name: str
-    age: int
-    grades: List[float]
-    email: Optional[str] = None
+<span class="token decorator annotation punctuation">@dataclass</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">:</span>
+    name<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    age<span class="token punctuation">:</span> <span class="token builtin">int</span>
+    grades<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">]</span>
+    email<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span>
     
-    def average_grade(self) -&gt; float:
-        return sum(self.grades) / len(self.grades)
+    <span class="token keyword">def</span> <span class="token function">average_grade</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>grades<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>grades<span class="token punctuation">)</span>
     
-    @property
-    def is_passing(self) -&gt; bool:
-        return self.average_grade() &gt;= 60
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">is_passing</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>average_grade<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">60</span>
 
-# Class inheritance
-class GraduateStudent(Student):
-    def __init__(self, name: str, age: int, grades: List[float], 
-                 research_topic: str):
-        super().__init__(name, age, grades)
-        self.research_topic = research_topic
+<span class="token comment"># Class inheritance</span>
+<span class="token keyword">class</span> <span class="token class-name">GraduateStudent</span><span class="token punctuation">(</span>Student<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> grades<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+                 research_topic<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> grades<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>research_topic <span class="token operator">=</span> research_topic
 </code></pre>
-<h3 id="4.-context-managers" tabindex="-1">4. Context Managers</h3>
-<pre><code class="language-python"># Using with statement
-with open('data.txt', 'r') as file:
-    content = file.read()
+<h3 id="4.-context-managers" tabindex="-1">4. Context Managers <a class="anchor" href="#4.-context-managers">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Using with statement</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'data.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-# Custom context manager
-from contextlib import contextmanager
+<span class="token comment"># Custom context manager</span>
+<span class="token keyword">from</span> contextlib <span class="token keyword">import</span> contextmanager
 
-@contextmanager
-def timer():
-    import time
-    start = time.time()
-    yield
-    end = time.time()
-    print(f&quot;Execution time: {end - start} seconds&quot;)
+<span class="token decorator annotation punctuation">@contextmanager</span>
+<span class="token keyword">def</span> <span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> time
+    start <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">yield</span>
+    end <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Execution time: </span><span class="token interpolation"><span class="token punctuation">{</span>end <span class="token operator">-</span> start<span class="token punctuation">}</span></span><span class="token string"> seconds"</span></span><span class="token punctuation">)</span>
 
-with timer():
-    # Code to measure
-    result = sum(range(1000000))
+<span class="token keyword">with</span> timer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Code to measure</span>
+    result <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<h2 id="modern-python-features" tabindex="-1">Modern Python Features</h2>
-<h3 id="1.-type-hints-and-type-checking" tabindex="-1">1. Type Hints and Type Checking</h3>
-<pre><code class="language-python">from typing import List, Dict, TypeVar, Generic
+<h2 id="modern-python-features" tabindex="-1">Modern Python Features <a class="anchor" href="#modern-python-features">#</a></h2>
+<h3 id="1.-type-hints-and-type-checking" tabindex="-1">1. Type Hints and Type Checking <a class="anchor" href="#1.-type-hints-and-type-checking">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Dict<span class="token punctuation">,</span> TypeVar<span class="token punctuation">,</span> Generic
 
-T = TypeVar('T')
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'T'</span><span class="token punctuation">)</span>
 
-class Stack(Generic[T]):
-    def __init__(self) -&gt; None:
-        self.items: List[T] = []
+<span class="token keyword">class</span> <span class="token class-name">Stack</span><span class="token punctuation">(</span>Generic<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>items<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     
-    def push(self, item: T) -&gt; None:
-        self.items.append(item)
+    <span class="token keyword">def</span> <span class="token function">push</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>items<span class="token punctuation">.</span>append<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
     
-    def pop(self) -&gt; T:
-        return self.items.pop()
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>items<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-# Type checking with mypy
-def process_data(data: Dict[str, int]) -&gt; List[int]:
-    return [value * 2 for value in data.values()]
+<span class="token comment"># Type checking with mypy</span>
+<span class="token keyword">def</span> <span class="token function">process_data</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>value <span class="token operator">*</span> <span class="token number">2</span> <span class="token keyword">for</span> value <span class="token keyword">in</span> data<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 </code></pre>
-<h3 id="2.-async-programming" tabindex="-1">2. Async Programming</h3>
-<pre><code class="language-python">import asyncio
-from aiohttp import ClientSession
+<h3 id="2.-async-programming" tabindex="-1">2. Async Programming <a class="anchor" href="#2.-async-programming">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> asyncio
+<span class="token keyword">from</span> aiohttp <span class="token keyword">import</span> ClientSession
 
-async def fetch_data(url: str) -&gt; dict:
-    async with ClientSession() as session:
-        async with session.get(url) as response:
-            return await response.json()
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">fetch_data</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+    <span class="token keyword">async</span> <span class="token keyword">with</span> ClientSession<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> session<span class="token punctuation">:</span>
+        <span class="token keyword">async</span> <span class="token keyword">with</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token keyword">as</span> response<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-async def process_urls(urls: List[str]) -&gt; List[dict]:
-    tasks = [fetch_data(url) for url in urls]
-    return await asyncio.gather(*tasks)
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">process_urls</span><span class="token punctuation">(</span>urls<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">dict</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    tasks <span class="token operator">=</span> <span class="token punctuation">[</span>fetch_data<span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> <span class="token keyword">await</span> asyncio<span class="token punctuation">.</span>gather<span class="token punctuation">(</span><span class="token operator">*</span>tasks<span class="token punctuation">)</span>
 
-# Running async code
-async def main():
-    urls = [
-        &quot;https://api.example.com/data1&quot;,
-        &quot;https://api.example.com/data2&quot;
-    ]
-    results = await process_urls(urls)
-    print(results)
+<span class="token comment"># Running async code</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    urls <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token string">"https://api.example.com/data1"</span><span class="token punctuation">,</span>
+        <span class="token string">"https://api.example.com/data2"</span>
+    <span class="token punctuation">]</span>
+    results <span class="token operator">=</span> <span class="token keyword">await</span> process_urls<span class="token punctuation">(</span>urls<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span>
 
-asyncio.run(main())
+asyncio<span class="token punctuation">.</span>run<span class="token punctuation">(</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<h3 id="3.-pattern-matching-(python-3.10%2B)" tabindex="-1">3. Pattern Matching (Python 3.10+)</h3>
-<pre><code class="language-python">def process_command(command):
-    match command.split():
-        case [&quot;quit&quot;]:
-            return &quot;Exiting...&quot;
-        case [&quot;load&quot;, filename]:
-            return f&quot;Loading {filename}&quot;
-        case [&quot;save&quot;, filename, &quot;as&quot;, format]:
-            return f&quot;Saving {filename} as {format}&quot;
-        case _:
-            return &quot;Unknown command&quot;
+<h3 id="3.-pattern-matching-(python-3.10%2B)" tabindex="-1">3. Pattern Matching (Python 3.10+) <a class="anchor" href="#3.-pattern-matching-(python-3.10%2B)">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">process_command</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">match</span> command<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">case</span> <span class="token punctuation">[</span><span class="token string">"quit"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Exiting..."</span>
+        <span class="token keyword">case</span> <span class="token punctuation">[</span><span class="token string">"load"</span><span class="token punctuation">,</span> filename<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"Loading </span><span class="token interpolation"><span class="token punctuation">{</span>filename<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+        <span class="token keyword">case</span> <span class="token punctuation">[</span><span class="token string">"save"</span><span class="token punctuation">,</span> filename<span class="token punctuation">,</span> <span class="token string">"as"</span><span class="token punctuation">,</span> <span class="token builtin">format</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"Saving </span><span class="token interpolation"><span class="token punctuation">{</span>filename<span class="token punctuation">}</span></span><span class="token string"> as </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">format</span><span class="token punctuation">}</span></span><span class="token string">"</span></span>
+        <span class="token keyword">case</span> <span class="token keyword">_</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Unknown command"</span>
 </code></pre>
-<h2 id="best-practices" tabindex="-1">Best Practices</h2>
-<h3 id="1.-code-style-(pep-8)" tabindex="-1">1. Code Style (PEP 8)</h3>
-<pre><code class="language-python"># Good variable names
-user_name = &quot;Alice&quot;
-total_count = 0
+<h2 id="best-practices" tabindex="-1">Best Practices <a class="anchor" href="#best-practices">#</a></h2>
+<h3 id="1.-code-style-(pep-8)" tabindex="-1">1. Code Style (PEP 8) <a class="anchor" href="#1.-code-style-(pep-8)">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Good variable names</span>
+user_name <span class="token operator">=</span> <span class="token string">"Alice"</span>
+total_count <span class="token operator">=</span> <span class="token number">0</span>
 
-# List comprehension (preferred over map/filter)
-squares = [x**2 for x in range(10)]
-even_squares = [x**2 for x in range(10) if x % 2 == 0]
+<span class="token comment"># List comprehension (preferred over map/filter)</span>
+squares <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+even_squares <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
 
-# Proper function spacing
-def complex_function(
-        arg1: str,
-        arg2: int,
-        *args: tuple,
-        **kwargs: dict
-) -&gt; dict:
-    &quot;&quot;&quot;Docstring explaining function purpose.&quot;&quot;&quot;
-    return {&quot;result&quot;: arg1 * arg2}
+<span class="token comment"># Proper function spacing</span>
+<span class="token keyword">def</span> <span class="token function">complex_function</span><span class="token punctuation">(</span>
+        arg1<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span>
+        arg2<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span>
+        <span class="token operator">*</span>args<span class="token punctuation">:</span> <span class="token builtin">tuple</span><span class="token punctuation">,</span>
+        <span class="token operator">**</span>kwargs<span class="token punctuation">:</span> <span class="token builtin">dict</span>
+<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Docstring explaining function purpose."""</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"result"</span><span class="token punctuation">:</span> arg1 <span class="token operator">*</span> arg2<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2.-testing-with-pytest" tabindex="-1">2. Testing with pytest</h3>
-<pre><code class="language-python">import pytest
+<h3 id="2.-testing-with-pytest" tabindex="-1">2. Testing with pytest <a class="anchor" href="#2.-testing-with-pytest">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> pytest
 
-def test_addition():
-    assert 1 + 1 == 2
+<span class="token keyword">def</span> <span class="token function">test_addition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">assert</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">2</span>
 
-@pytest.fixture
-def sample_data():
-    return {&quot;name&quot;: &quot;Test&quot;, &quot;value&quot;: 42}
+<span class="token decorator annotation punctuation">@pytest<span class="token punctuation">.</span>fixture</span>
+<span class="token keyword">def</span> <span class="token function">sample_data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Test"</span><span class="token punctuation">,</span> <span class="token string">"value"</span><span class="token punctuation">:</span> <span class="token number">42</span><span class="token punctuation">}</span>
 
-def test_with_fixture(sample_data):
-    assert sample_data[&quot;value&quot;] == 42
+<span class="token keyword">def</span> <span class="token function">test_with_fixture</span><span class="token punctuation">(</span>sample_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">assert</span> sample_data<span class="token punctuation">[</span><span class="token string">"value"</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">42</span>
 
-@pytest.mark.parametrize(&quot;input,expected&quot;, [
-    (2, 4),
-    (3, 6),
-    (4, 8),
-])
-def test_multiplication(input, expected):
-    assert input * 2 == expected
+<span class="token decorator annotation punctuation">@pytest<span class="token punctuation">.</span>mark<span class="token punctuation">.</span>parametrize</span><span class="token punctuation">(</span><span class="token string">"input,expected"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">test_multiplication</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">,</span> expected<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">assert</span> <span class="token builtin">input</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">==</span> expected
 </code></pre>
-<h3 id="3.-error-handling" tabindex="-1">3. Error Handling</h3>
-<pre><code class="language-python">class CustomError(Exception):
-    &quot;&quot;&quot;Custom error class&quot;&quot;&quot;
-    pass
+<h3 id="3.-error-handling" tabindex="-1">3. Error Handling <a class="anchor" href="#3.-error-handling">#</a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CustomError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Custom error class"""</span>
+    <span class="token keyword">pass</span>
 
-def process_data(data: dict) -&gt; None:
-    try:
-        value = data[&quot;key&quot;]
-    except KeyError as e:
-        raise CustomError(f&quot;Missing required key: {e}&quot;)
-    except Exception as e:
-        logger.error(f&quot;Unexpected error: {e}&quot;)
-        raise
-    else:
-        print(&quot;Processing successful&quot;)
-    finally:
-        print(&quot;Cleanup code&quot;)</code></pre>
+<span class="token keyword">def</span> <span class="token function">process_data</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> <span class="token builtin">dict</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        value <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token string">"key"</span><span class="token punctuation">]</span>
+    <span class="token keyword">except</span> KeyError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> CustomError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Missing required key: </span><span class="token interpolation"><span class="token punctuation">{</span>e<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Unexpected error: </span><span class="token interpolation"><span class="token punctuation">{</span>e<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Processing successful"</span><span class="token punctuation">)</span>
+    <span class="token keyword">finally</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Cleanup code"</span><span class="token punctuation">)</span></code></pre>
 
         </article>
     </main>

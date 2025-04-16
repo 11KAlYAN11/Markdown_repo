@@ -38,175 +38,175 @@
     <main class="content">
         <article>
             <h1>Java Programming Guide</h1>
-            <h1 id="java-programming-guide" tabindex="-1">Java Programming Guide</h1>
-<h2 id="introduction-to-java" tabindex="-1">Introduction to Java</h2>
-<p>Java is a class-based, object-oriented programming language designed to be platform-independent through the Java Virtual Machine (JVM). It follows the principle of &quot;Write Once, Run Anywhere.&quot;</p>
-<h2 id="core-concepts" tabindex="-1">Core Concepts</h2>
-<h3 id="1.-object-oriented-programming" tabindex="-1">1. Object-Oriented Programming</h3>
-<pre><code class="language-java">// Class definition with inheritance
-public class Animal {
-    protected String name;
+            <h1 id="java-programming-guide" tabindex="-1">Java Programming Guide <a class="anchor" href="#java-programming-guide">#</a></h1>
+<h2 id="introduction-to-java" tabindex="-1">Introduction to Java <a class="anchor" href="#introduction-to-java">#</a></h2>
+<p>Java is a class-based, object-oriented programming language designed to be platform-independent through the Java Virtual Machine (JVM). It follows the principle of “Write Once, Run Anywhere.”</p>
+<h2 id="core-concepts" tabindex="-1">Core Concepts <a class="anchor" href="#core-concepts">#</a></h2>
+<h3 id="1.-object-oriented-programming" tabindex="-1">1. Object-Oriented Programming <a class="anchor" href="#1.-object-oriented-programming">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token comment">// Class definition with inheritance</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
     
-    public Animal(String name) {
-        this.name = name;
-    }
+    <span class="token keyword">public</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    public void makeSound() {
-        System.out.println(&quot;Some sound&quot;);
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Some sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-public class Dog extends Animal {
-    public Dog(String name) {
-        super(name);
-    }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    @Override
-    public void makeSound() {
-        System.out.println(&quot;Woof!&quot;);
-    }
-}
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Woof!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2.-interfaces-and-abstract-classes" tabindex="-1">2. Interfaces and Abstract Classes</h3>
-<pre><code class="language-java">// Interface
-public interface Flyable {
-    void fly();
-    default void glide() {
-        System.out.println(&quot;Gliding...&quot;);
-    }
-}
+<h3 id="2.-interfaces-and-abstract-classes" tabindex="-1">2. Interfaces and Abstract Classes <a class="anchor" href="#2.-interfaces-and-abstract-classes">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token comment">// Interface</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Flyable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token function">fly</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span> <span class="token keyword">void</span> <span class="token function">glide</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Gliding..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// Abstract class
-public abstract class Bird implements Flyable {
-    protected String species;
+<span class="token comment">// Abstract class</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Bird</span> <span class="token keyword">implements</span> <span class="token class-name">Flyable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> species<span class="token punctuation">;</span>
     
-    public Bird(String species) {
-        this.species = species;
-    }
+    <span class="token keyword">public</span> <span class="token class-name">Bird</span><span class="token punctuation">(</span><span class="token class-name">String</span> species<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>species <span class="token operator">=</span> species<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    abstract void sing();
-}
+    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">sing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="3.-collections-framework" tabindex="-1">3. Collections Framework</h3>
-<pre><code class="language-java">import java.util.*;
+<h3 id="3.-collections-framework" tabindex="-1">3. Collections Framework <a class="anchor" href="#3.-collections-framework">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
 
-// List example
-List&lt;String&gt; names = new ArrayList&lt;&gt;();
-names.add(&quot;Alice&quot;);
-names.add(&quot;Bob&quot;);
+<span class="token comment">// List example</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> names <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+names<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+names<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Map example
-Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
-scores.put(&quot;Alice&quot;, 95);
-scores.put(&quot;Bob&quot;, 87);
+<span class="token comment">// Map example</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">></span></span> scores <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+scores<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+scores<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Stream API usage
-int totalScore = scores.values().stream()
-    .mapToInt(Integer::intValue)
-    .sum();
+<span class="token comment">// Stream API usage</span>
+<span class="token keyword">int</span> totalScore <span class="token operator">=</span> scores<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">mapToInt</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">intValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Using Optional
-Optional&lt;String&gt; topStudent = scores.entrySet().stream()
-    .max(Map.Entry.comparingByValue())
-    .map(Map.Entry::getKey);
+<span class="token comment">// Using Optional</span>
+<span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> topStudent <span class="token operator">=</span> scores<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span><span class="token punctuation">.</span><span class="token function">comparingByValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span><span class="token operator">::</span><span class="token function">getKey</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="4.-exception-handling" tabindex="-1">4. Exception Handling</h3>
-<pre><code class="language-java">public class CustomException extends Exception {
-    public CustomException(String message) {
-        super(message);
-    }
-}
+<h3 id="4.-exception-handling" tabindex="-1">4. Exception Handling <a class="anchor" href="#4.-exception-handling">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomException</span> <span class="token keyword">extends</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">CustomException</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-public void processFile(String path) throws CustomException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-        String line;
-        while ((line = reader.readLine()) != null) {
-            // Process line
-        }
-    } catch (IOException e) {
-        throw new CustomException(&quot;Error reading file: &quot; + e.getMessage());
-    }
-}
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">processFile</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">CustomException</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">(</span><span class="token class-name">BufferedReader</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> line<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>line <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Process line</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">CustomException</span><span class="token punctuation">(</span><span class="token string">"Error reading file: "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h2 id="modern-java-features" tabindex="-1">Modern Java Features</h2>
-<h3 id="1.-lambda-expressions" tabindex="-1">1. Lambda Expressions</h3>
-<pre><code class="language-java">// Function interface
-@FunctionalInterface
-interface Calculator {
-    int calculate(int x, int y);
-}
+<h2 id="modern-java-features" tabindex="-1">Modern Java Features <a class="anchor" href="#modern-java-features">#</a></h2>
+<h3 id="1.-lambda-expressions" tabindex="-1">1. Lambda Expressions <a class="anchor" href="#1.-lambda-expressions">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token comment">// Function interface</span>
+<span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword">interface</span> <span class="token class-name">Calculator</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// Using lambda
-Calculator add = (x, y) -&gt; x + y;
-Calculator multiply = (x, y) -&gt; x * y;
+<span class="token comment">// Using lambda</span>
+<span class="token class-name">Calculator</span> add <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">-></span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+<span class="token class-name">Calculator</span> multiply <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">-></span> x <span class="token operator">*</span> y<span class="token punctuation">;</span>
 
-// With collections
-List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;);
-names.forEach(name -&gt; System.out.println(&quot;Hello, &quot; + name));
+<span class="token comment">// With collections</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> names <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token string">"Charlie"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+names<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>name <span class="token operator">-></span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, "</span> <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-records-(java-16%2B)" tabindex="-1">2. Records (Java 16+)</h3>
-<pre><code class="language-java">public record Person(String name, int age) {
-    // Compact constructor
-    public Person {
-        if (age &lt; 0) {
-            throw new IllegalArgumentException(&quot;Age cannot be negative&quot;);
-        }
-    }
+<h3 id="2.-records-(java-16%2B)" tabindex="-1">2. Records (Java 16+) <a class="anchor" href="#2.-records-(java-16%2B)">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">record</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Compact constructor</span>
+    <span class="token keyword">public</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Age cannot be negative"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
     
-    // Additional methods
-    public boolean isAdult() {
-        return age &gt;= 18;
-    }
-}
+    <span class="token comment">// Additional methods</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isAdult</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age <span class="token operator">>=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="3.-pattern-matching-(java-17%2B)" tabindex="-1">3. Pattern Matching (Java 17+)</h3>
-<pre><code class="language-java">public String getTypeDescription(Object obj) {
-    return switch (obj) {
-        case String s -&gt; &quot;Text of length &quot; + s.length();
-        case Integer i -&gt; &quot;Number: &quot; + i;
-        case Person p -&gt; &quot;Person named &quot; + p.name();
-        case null -&gt; &quot;Null object&quot;;
-        default -&gt; &quot;Unknown type&quot;;
-    };
-}
+<h3 id="3.-pattern-matching-(java-17%2B)" tabindex="-1">3. Pattern Matching (Java 17+) <a class="anchor" href="#3.-pattern-matching-(java-17%2B)">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getTypeDescription</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token class-name">String</span> s <span class="token operator">-></span> <span class="token string">"Text of length "</span> <span class="token operator">+</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token class-name">Integer</span> i <span class="token operator">-></span> <span class="token string">"Number: "</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token class-name">Person</span> p <span class="token operator">-></span> <span class="token string">"Person named "</span> <span class="token operator">+</span> p<span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token keyword">null</span> <span class="token operator">-></span> <span class="token string">"Null object"</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token string">"Unknown type"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h2 id="concurrency" tabindex="-1">Concurrency</h2>
-<h3 id="1.-thread-management" tabindex="-1">1. Thread Management</h3>
-<pre><code class="language-java">// Using Runnable
-Runnable task = () -&gt; {
-    System.out.println(&quot;Running in thread: &quot; + 
-        Thread.currentThread().getName());
-};
-new Thread(task).start();
+<h2 id="concurrency" tabindex="-1">Concurrency <a class="anchor" href="#concurrency">#</a></h2>
+<h3 id="1.-thread-management" tabindex="-1">1. Thread Management <a class="anchor" href="#1.-thread-management">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token comment">// Using Runnable</span>
+<span class="token class-name">Runnable</span> task <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Running in thread: "</span> <span class="token operator">+</span> 
+        <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Using ExecutorService
-ExecutorService executor = Executors.newFixedThreadPool(4);
-Future&lt;String&gt; future = executor.submit(() -&gt; &quot;Task result&quot;);
+<span class="token comment">// Using ExecutorService</span>
+<span class="token class-name">ExecutorService</span> executor <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> future <span class="token operator">=</span> executor<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token string">"Task result"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-synchronization" tabindex="-1">2. Synchronization</h3>
-<pre><code class="language-java">public class SafeCounter {
-    private AtomicInteger count = new AtomicInteger(0);
+<h3 id="2.-synchronization" tabindex="-1">2. Synchronization <a class="anchor" href="#2.-synchronization">#</a></h3>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SafeCounter</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">AtomicInteger</span> count <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AtomicInteger</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    public void increment() {
-        count.incrementAndGet();
-    }
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        count<span class="token punctuation">.</span><span class="token function">incrementAndGet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    public synchronized void synchronizedMethod() {
-        // Thread-safe code
-    }
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">synchronizedMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Thread-safe code</span>
+    <span class="token punctuation">}</span>
     
-    public void lockExample() {
-        Lock lock = new ReentrantLock();
-        lock.lock();
-        try {
-            // Critical section
-        } finally {
-            lock.unlock();
-        }
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lockExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Lock</span> lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Critical section</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<h2 id="best-practices" tabindex="-1">Best Practices <a class="anchor" href="#best-practices">#</a></h2>
 <ol>
 <li>
 <p>Follow naming conventions</p>
@@ -226,34 +226,34 @@ Future&lt;String&gt; future = executor.submit(() -&gt; &quot;Task result&quot;);
 </li>
 <li>
 <p>Handle resources properly</p>
-<pre><code class="language-java">try (Resource resource = new Resource()) {
-    // Use resource
-} // Auto-closed
+<pre class="language-java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">(</span><span class="token class-name">Resource</span> resource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Resource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Use resource</span>
+<span class="token punctuation">}</span> <span class="token comment">// Auto-closed</span>
 </code></pre>
 </li>
 <li>
 <p>Use builders for complex objects</p>
-<pre><code class="language-java">Person person = Person.builder()
-    .name(&quot;John&quot;)
-    .age(25)
-    .address(&quot;123 Street&quot;)
-    .build();
+<pre class="language-java"><code class="language-java"><span class="token class-name">Person</span> person <span class="token operator">=</span> <span class="token class-name">Person</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">age</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">address</span><span class="token punctuation">(</span><span class="token string">"123 Street"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ol>
-<h2 id="testing-with-junit" tabindex="-1">Testing with JUnit</h2>
-<pre><code class="language-java">@Test
-void testAddition() {
-    Calculator calc = new Calculator();
-    assertEquals(4, calc.add(2, 2), &quot;2 + 2 should equal 4&quot;);
-}
+<h2 id="testing-with-junit" tabindex="-1">Testing with JUnit <a class="anchor" href="#testing-with-junit">#</a></h2>
+<pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">void</span> <span class="token function">testAddition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Calculator</span> calc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Calculator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> calc<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"2 + 2 should equal 4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-@Test
-void testExceptionThrown() {
-    assertThrows(IllegalArgumentException.class, () -&gt; {
-        new Person(&quot;Test&quot;, -1);
-    });
-}</code></pre>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">void</span> <span class="token function">testExceptionThrown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">assertThrows</span><span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Test"</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
         </article>
     </main>

@@ -38,110 +38,110 @@
     <main class="content">
         <article>
             <h1>C Programming Guide</h1>
-            <h1 id="c-programming-guide" tabindex="-1">C Programming Guide</h1>
-<h2 id="introduction-to-c" tabindex="-1">Introduction to C</h2>
-<p>C is a general-purpose, procedural programming language that provides low-level access to system memory and hardware. It's widely used in system programming, embedded systems, and developing operating systems.</p>
-<h2 id="key-concepts" tabindex="-1">Key Concepts</h2>
-<h3 id="1.-basic-structure" tabindex="-1">1. Basic Structure</h3>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
+            <h1 id="c-programming-guide" tabindex="-1">C Programming Guide <a class="anchor" href="#c-programming-guide">#</a></h1>
+<h2 id="introduction-to-c" tabindex="-1">Introduction to C <a class="anchor" href="#introduction-to-c">#</a></h2>
+<p>C is a general-purpose, procedural programming language that provides low-level access to system memory and hardware. It’s widely used in system programming, embedded systems, and developing operating systems.</p>
+<h2 id="key-concepts" tabindex="-1">Key Concepts <a class="anchor" href="#key-concepts">#</a></h2>
+<h3 id="1.-basic-structure" tabindex="-1">1. Basic Structure <a class="anchor" href="#1.-basic-structure">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
-int main() {
-    printf(&quot;Hello, World!\n&quot;);
-    return 0;
-}
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="2.-data-types" tabindex="-1">2. Data Types</h3>
-<pre><code class="language-c">// Basic data types
-int number = 42;              // Integer
-float decimal = 3.14f;        // Single precision floating point
-double pi = 3.14159265359;    // Double precision floating point
-char letter = 'A';            // Single character
-char name[] = &quot;John&quot;;         // String (character array)
+<h3 id="2.-data-types" tabindex="-1">2. Data Types <a class="anchor" href="#2.-data-types">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token comment">// Basic data types</span>
+<span class="token keyword">int</span> number <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>              <span class="token comment">// Integer</span>
+<span class="token keyword">float</span> decimal <span class="token operator">=</span> <span class="token number">3.14f</span><span class="token punctuation">;</span>        <span class="token comment">// Single precision floating point</span>
+<span class="token keyword">double</span> pi <span class="token operator">=</span> <span class="token number">3.14159265359</span><span class="token punctuation">;</span>    <span class="token comment">// Double precision floating point</span>
+<span class="token keyword">char</span> letter <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span>            <span class="token comment">// Single character</span>
+<span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>         <span class="token comment">// String (character array)</span>
 </code></pre>
-<h3 id="3.-control-structures" tabindex="-1">3. Control Structures</h3>
-<pre><code class="language-c">// If-else statement
-if (number &gt; 0) {
-    printf(&quot;Positive number\n&quot;);
-} else if (number &lt; 0) {
-    printf(&quot;Negative number\n&quot;);
-} else {
-    printf(&quot;Zero\n&quot;);
-}
+<h3 id="3.-control-structures" tabindex="-1">3. Control Structures <a class="anchor" href="#3.-control-structures">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token comment">// If-else statement</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Positive number\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Negative number\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Zero\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// For loop
-for (int i = 0; i &lt; 5; i++) {
-    printf(&quot;%d &quot;, i);
-}
+<span class="token comment">// For loop</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// While loop
-int j = 0;
-while (j &lt; 5) {
-    printf(&quot;%d &quot;, j);
-    j++;
-}
+<span class="token comment">// While loop</span>
+<span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="4.-functions" tabindex="-1">4. Functions</h3>
-<pre><code class="language-c">// Function declaration
-int add(int a, int b);
+<h3 id="4.-functions" tabindex="-1">4. Functions <a class="anchor" href="#4.-functions">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token comment">// Function declaration</span>
+<span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Function definition
-int add(int a, int b) {
-    return a + b;
-}
+<span class="token comment">// Function definition</span>
+<span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// Using pointers in functions
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+<span class="token comment">// Using pointers in functions</span>
+<span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>a<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">*</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token operator">*</span>a<span class="token punctuation">;</span>
+    <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+    <span class="token operator">*</span>b <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="5.-memory-management" tabindex="-1">5. Memory Management</h3>
-<pre><code class="language-c">#include &lt;stdlib.h&gt;
+<h3 id="5.-memory-management" tabindex="-1">5. Memory Management <a class="anchor" href="#5.-memory-management">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
 
-// Dynamic memory allocation
-int *arr = (int*)malloc(5 * sizeof(int));
-if (arr != NULL) {
-    // Use the allocated memory
-    for (int i = 0; i &lt; 5; i++) {
-        arr[i] = i + 1;
-    }
+<span class="token comment">// Dynamic memory allocation</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>arr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>arr <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Use the allocated memory</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    // Free the allocated memory
-    free(arr);
-}
+    <span class="token comment">// Free the allocated memory</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h2 id="advanced-topics" tabindex="-1">Advanced Topics</h2>
-<h3 id="1.-structures" tabindex="-1">1. Structures</h3>
-<pre><code class="language-c">struct Person {
-    char name[50];
-    int age;
-    float height;
-};
+<h2 id="advanced-topics" tabindex="-1">Advanced Topics <a class="anchor" href="#advanced-topics">#</a></h2>
+<h3 id="1.-structures" tabindex="-1">1. Structures <a class="anchor" href="#1.-structures">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token keyword">struct</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> height<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-// Using structures
-struct Person person1 = {&quot;John&quot;, 25, 1.75};
-printf(&quot;Name: %s, Age: %d\n&quot;, person1.name, person1.age);
+<span class="token comment">// Using structures</span>
+<span class="token keyword">struct</span> <span class="token class-name">Person</span> person1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"John"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">1.75</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Name: %s, Age: %d\n"</span><span class="token punctuation">,</span> person1<span class="token punctuation">.</span>name<span class="token punctuation">,</span> person1<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="2.-file-handling" tabindex="-1">2. File Handling</h3>
-<pre><code class="language-c">// Writing to a file
-FILE *file = fopen(&quot;data.txt&quot;, &quot;w&quot;);
-if (file != NULL) {
-    fprintf(file, &quot;Hello, File!\n&quot;);
-    fclose(file);
-}
+<h3 id="2.-file-handling" tabindex="-1">2. File Handling <a class="anchor" href="#2.-file-handling">#</a></h3>
+<pre class="language-c"><code class="language-c"><span class="token comment">// Writing to a file</span>
+FILE <span class="token operator">*</span>file <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>file <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fprintf</span><span class="token punctuation">(</span>file<span class="token punctuation">,</span> <span class="token string">"Hello, File!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-// Reading from a file
-char buffer[100];
-file = fopen(&quot;data.txt&quot;, &quot;r&quot;);
-if (file != NULL) {
-    while (fgets(buffer, sizeof(buffer), file) != NULL) {
-        printf(&quot;%s&quot;, buffer);
-    }
-    fclose(file);
-}
+<span class="token comment">// Reading from a file</span>
+<span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+file <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>file <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">fgets</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> buffer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<h2 id="best-practices" tabindex="-1">Best Practices <a class="anchor" href="#best-practices">#</a></h2>
 <ol>
 <li>Always initialize variables before use</li>
 <li>Free allocated memory to prevent memory leaks</li>
@@ -149,7 +149,7 @@ if (file != NULL) {
 <li>Use meaningful variable and function names</li>
 <li>Comment your code appropriately</li>
 </ol>
-<h2 id="common-pitfalls" tabindex="-1">Common Pitfalls</h2>
+<h2 id="common-pitfalls" tabindex="-1">Common Pitfalls <a class="anchor" href="#common-pitfalls">#</a></h2>
 <ol>
 <li>Buffer overflows</li>
 <li>Memory leaks</li>
@@ -157,18 +157,18 @@ if (file != NULL) {
 <li>Array index out of bounds</li>
 <li>Uninitialized variables</li>
 </ol>
-<h2 id="debugging-tips" tabindex="-1">Debugging Tips</h2>
-<pre><code class="language-c">// Using printf for debugging
-printf(&quot;Debug: x = %d, y = %d\n&quot;, x, y);
+<h2 id="debugging-tips" tabindex="-1">Debugging Tips <a class="anchor" href="#debugging-tips">#</a></h2>
+<pre class="language-c"><code class="language-c"><span class="token comment">// Using printf for debugging</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Debug: x = %d, y = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Using assert
-#include &lt;assert.h&gt;
-assert(pointer != NULL);
+<span class="token comment">// Using assert</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;assert.h></span></span>
+<span class="token function">assert</span><span class="token punctuation">(</span>pointer <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Using preprocessor directives
-#ifdef DEBUG
-    printf(&quot;Debug information\n&quot;);
-#endif
+<span class="token comment">// Using preprocessor directives</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">DEBUG</span></span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Debug information\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
 </code></pre>
 
         </article>
