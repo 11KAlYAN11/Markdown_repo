@@ -2,6 +2,28 @@
 
 A modern documentation site generator built with Eleventy that supports Markdown files and Pandoc conversions.
 
+## Repository Details
+
+- **Description**: A flexible documentation generator that converts multiple document formats to a modern, searchable static site
+- **Website**: https://markdown-docs-generator.netlify.app
+- **Topics**: documentation markdown eleventy pandoc static-site documentation-generator
+
+## Publishing Information
+
+### Releases
+- Latest stable version: v1.0.0
+- Release schedule: Monthly
+- [View all releases](./releases)
+
+### Deployment
+This project is configured for automatic deployment:
+- Main documentation: Netlify
+- Package registry: npm
+
+### Packages
+- Available on npm: `@markdown-repo/docs-generator`
+- Install: `npm install @markdown-repo/docs-generator`
+
 ## Features
 
 - Write content in Markdown
