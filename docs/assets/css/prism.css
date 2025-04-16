@@ -1,0 +1,95 @@
+/* prism.css - Elegant Dark Theme for Code Blocks */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e0e0e0;
+    background: none;
+    font-family: 'Fira Code', Consolas, Monaco, monospace;
+    font-size: 0.95em;
+    white-space: pre;
+    word-wrap: normal;
+    line-height: 1.6;
+    tab-size: 4;
+}
+
+pre[class*="language-"] {
+    background: #1e1e2f;
+    padding: 1.2em;
+    margin: 1.2em 0;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+:not(pre) > code[class*="language-"] {
+    background: #2e2e3e;
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Syntax Tokens */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #cccccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+    color: #e06c75;
+}
+
+.token.function-name,
+.token.function {
+    color: #dcdcaa;
+}
+
+.token.boolean,
+.token.number {
+    color: #b5cea8;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+    color: #569cd6;
+}
+
+.token.selector,
+.token.keyword,
+.token.builtin,
+.token.atrule {
+    color: #c586c0;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+    color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: #9cdcfe;
+}
+
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
