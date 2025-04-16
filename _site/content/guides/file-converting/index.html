@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Conversion Learning Guide</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+</head>
+<body class="line-numbers">
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Documentation</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="/" >Documentation Learning Project</a></li>
+                <li><a href="/content/guides/getting-started/" >Getting Started with Documentation</a></li>
+                <li><a href="/content/guides/c-programming/" >C Programming Guide</a></li>
+                <li><a href="/content/guides/cpp-programming/" >C++ Programming Guide</a></li>
+                <li><a href="/content/guides/java-programming/" >Java Programming Guide</a></li>
+                <li><a href="/content/guides/python-programming/" >Python Programming Guide</a></li>
+                <li><a href="/content/converted/sample/" ></a></li>
+                <li><a href="/content/converted/sample-tex/" ></a></li>
+                <li><a href="/content/converted/sample-rst/" ></a></li>
+                <li><a href="/content/converted/sample-txt/" ></a></li>
+                <li><a href="/content/converted/sample-docx/" ></a></li>
+                <li><a href="/content/guides/latex-example/" >LaTeX Document Example</a></li>
+                <li><a href="/content/guides/rst-example/" >reStructuredText Document Example</a></li>
+                <li><a href="/content/guides/plaintext-example/" >Plain Text Document Example</a></li>
+                <li><a href="/content/guides/word-example/" >Word Document Example</a></li>
+                <li><a href="/content/guides/format-conversion-guide/" >Document Format Conversion Guide</a></li>
+                <li><a href="/content/guides/file-converting/" class="active">File Conversion Learning Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="content">
+        <article>
+            <h1>File Conversion Learning Guide</h1>
+            <h1 id="learning-document-conversion-for-documentation" tabindex="-1">Learning Document Conversion for Documentation <a class="anchor" href="#learning-document-conversion-for-documentation">#</a></h1>
+<p>This guide walks through the journey of building a documentation system that can handle multiple file formats. We’ll explore each step taken and the lessons learned along the way.</p>
+<h2 id="project-evolution" tabindex="-1">Project Evolution <a class="anchor" href="#project-evolution">#</a></h2>
+<h3 id="1.-initial-setup-phase" tabindex="-1">1. Initial Setup Phase <a class="anchor" href="#1.-initial-setup-phase">#</a></h3>
+<p>We started by setting up a basic project structure:</p>
+<ol>
+<li>
+<p>Initialize Node.js project:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> init <span class="token parameter variable">-y</span>
+</code></pre>
+</li>
+<li>
+<p>Install core dependencies:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> @11ty/eleventy markdown-it markdown-it-anchor
+</code></pre>
+</li>
+<li>
+<p>Create basic directory structure:</p>
+<pre class="language-plaintext"><code class="language-plaintext">docs/
+├── _layouts/    # Templates
+├── assets/      # Static files
+└── content/     # Documentation
+</code></pre>
+</li>
+</ol>
+<h3 id="2.-document-conversion-setup" tabindex="-1">2. Document Conversion Setup <a class="anchor" href="#2.-document-conversion-setup">#</a></h3>
+<p>We added Pandoc support to handle multiple file formats:</p>
+<ol>
+<li>
+<p>Install Pandoc:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> pandoc texlive
+</code></pre>
+</li>
+<li>
+<p>Create conversion script (scripts/pandoc-convert.js):</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> spawn <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Script details in the repository</span>
+</code></pre>
+</li>
+<li>
+<p>Test different formats:</p>
+<ul>
+<li>LaTeX (.tex)</li>
+<li>Word (.docx)</li>
+<li>reStructuredText (.rst)</li>
+<li>Plain text (.txt)</li>
+</ul>
+</li>
+</ol>
+<h3 id="3.-styling-enhancement" tabindex="-1">3. Styling Enhancement <a class="anchor" href="#3.-styling-enhancement">#</a></h3>
+<p>We implemented professional styling with:</p>
+<ol>
+<li>Modern CSS layout</li>
+<li>Responsive design</li>
+<li>Syntax highlighting via Prism.js</li>
+<li>Mobile-friendly navigation</li>
+</ol>
+<h2 id="working-with-different-formats" tabindex="-1">Working with Different Formats <a class="anchor" href="#working-with-different-formats">#</a></h2>
+<h3 id="latex-documents" tabindex="-1">LaTeX Documents <a class="anchor" href="#latex-documents">#</a></h3>
+<ol>
+<li>
+<p><strong>Structure</strong>: LaTeX documents use a specific structure:</p>
+<pre class="language-latex"><code class="language-latex"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+Your content here
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li>
+<p><strong>Conversion Process</strong>:</p>
+<pre class="language-bash"><code class="language-bash">pandoc input.tex <span class="token parameter variable">-f</span> latex <span class="token parameter variable">-t</span> markdown <span class="token parameter variable">-o</span> output.md
+</code></pre>
+</li>
+<li>
+<p><strong>Key Points</strong>:</p>
+<ul>
+<li>Mathematical equations are preserved</li>
+<li>Tables convert cleanly</li>
+<li>Bibliography support</li>
+</ul>
+</li>
+</ol>
+<h3 id="word-documents" tabindex="-1">Word Documents <a class="anchor" href="#word-documents">#</a></h3>
+<ol>
+<li>
+<p><strong>Best Practices</strong>:</p>
+<ul>
+<li>Use proper heading styles</li>
+<li>Maintain consistent formatting</li>
+<li>Use built-in features for lists/tables</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversion Command</strong>:</p>
+<pre class="language-bash"><code class="language-bash">pandoc input.docx <span class="token parameter variable">-f</span> docx <span class="token parameter variable">-t</span> markdown <span class="token parameter variable">-o</span> output.md
+</code></pre>
+</li>
+<li>
+<p><strong>Features Preserved</strong>:</p>
+<ul>
+<li>Document structure</li>
+<li>Text formatting</li>
+<li>Tables and lists</li>
+<li>Images (with proper handling)</li>
+</ul>
+</li>
+</ol>
+<h3 id="restructuredtext-(rst)" tabindex="-1">reStructuredText (RST) <a class="anchor" href="#restructuredtext-(rst)">#</a></h3>
+<ol>
+<li>
+<p><strong>Common Elements</strong>:</p>
+<pre class="language-plaintext"><code class="language-plaintext">Title
+=====
+
+Section
+-------
+
+* Bullet point
+* Another point
+</code></pre>
+</li>
+<li>
+<p><strong>Conversion Process</strong>:</p>
+<pre class="language-bash"><code class="language-bash">pandoc input.rst <span class="token parameter variable">-f</span> rst <span class="token parameter variable">-t</span> markdown <span class="token parameter variable">-o</span> output.md
+</code></pre>
+</li>
+<li>
+<p><strong>Special Features</strong>:</p>
+<ul>
+<li>Directives convert to HTML/Markdown</li>
+<li>Code blocks maintain syntax</li>
+<li>Admonitions become blockquotes</li>
+</ul>
+</li>
+</ol>
+<h3 id="plain-text" tabindex="-1">Plain Text <a class="anchor" href="#plain-text">#</a></h3>
+<ol>
+<li>
+<p><strong>Formatting Guidelines</strong>:</p>
+<ul>
+<li>Use consistent indentation</li>
+<li>Clear section headers</li>
+<li>ASCII-style tables if needed</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversion Approach</strong>:</p>
+<pre class="language-bash"><code class="language-bash">pandoc input.txt <span class="token parameter variable">-f</span> text <span class="token parameter variable">-t</span> markdown <span class="token parameter variable">-o</span> output.md
+</code></pre>
+</li>
+</ol>
+<h2 id="code-highlighting-implementation" tabindex="-1">Code Highlighting Implementation <a class="anchor" href="#code-highlighting-implementation">#</a></h2>
+<p>We added syntax highlighting using Prism.js:</p>
+<ol>
+<li>
+<p><strong>Include Required Files</strong>:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prism.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prism.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li>
+<p><strong>Language Support</strong>:</p>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>Java</li>
+<li>C/C++</li>
+<li>Shell scripts</li>
+<li>And more…</li>
+</ul>
+</li>
+<li>
+<p><strong>Features Added</strong>:</p>
+<ul>
+<li>Line numbers</li>
+<li>Copy button</li>
+<li>Language indicators</li>
+</ul>
+</li>
+</ol>
+<h2 id="tips-for-learners" tabindex="-1">Tips for Learners <a class="anchor" href="#tips-for-learners">#</a></h2>
+<ol>
+<li>
+<p><strong>Start Small</strong>:</p>
+<ul>
+<li>Begin with basic Markdown</li>
+<li>Add one format at a time</li>
+<li>Test thoroughly before moving on</li>
+</ul>
+</li>
+<li>
+<p><strong>Common Issues</strong>:</p>
+<ul>
+<li>Check Pandoc installation</li>
+<li>Verify file permissions</li>
+<li>Watch for encoding issues</li>
+</ul>
+</li>
+<li>
+<p><strong>Best Practices</strong>:</p>
+<ul>
+<li>Keep source files organized</li>
+<li>Use consistent naming</li>
+<li>Document conversion steps</li>
+</ul>
+</li>
+</ol>
+<h2 id="advanced-features" tabindex="-1">Advanced Features <a class="anchor" href="#advanced-features">#</a></h2>
+<ol>
+<li>
+<p><strong>Custom Styling</strong>:</p>
+<ul>
+<li>Theme customization</li>
+<li>Mobile responsiveness</li>
+<li>Print-friendly styles</li>
+</ul>
+</li>
+<li>
+<p><strong>Navigation</strong>:</p>
+<ul>
+<li>Automatic sidebar</li>
+<li>Active page highlighting</li>
+<li>Breadcrumb support</li>
+</ul>
+</li>
+<li>
+<p><strong>Build Process</strong>:</p>
+<ul>
+<li>Automated conversions</li>
+<li>Asset optimization</li>
+<li>Error checking</li>
+</ul>
+</li>
+</ol>
+<h2 id="troubleshooting-guide" tabindex="-1">Troubleshooting Guide <a class="anchor" href="#troubleshooting-guide">#</a></h2>
+<h3 id="common-conversion-issues" tabindex="-1">Common Conversion Issues <a class="anchor" href="#common-conversion-issues">#</a></h3>
+<ol>
+<li>
+<p><strong>LaTeX Errors</strong>:</p>
+<ul>
+<li>Missing packages</li>
+<li>Complex equations</li>
+<li>Custom commands</li>
+</ul>
+</li>
+<li>
+<p><strong>Word Document Problems</strong>:</p>
+<ul>
+<li>Complex formatting</li>
+<li>Embedded objects</li>
+<li>Custom styles</li>
+</ul>
+</li>
+<li>
+<p><strong>RST Challenges</strong>:</p>
+<ul>
+<li>Directive conversion</li>
+<li>Complex tables</li>
+<li>Image handling</li>
+</ul>
+</li>
+</ol>
+<h3 id="solutions" tabindex="-1">Solutions <a class="anchor" href="#solutions">#</a></h3>
+<ol>
+<li>
+<p><strong>Format-Specific Fixes</strong>:</p>
+<ul>
+<li>Pre-process complex LaTeX</li>
+<li>Simplify Word styles</li>
+<li>Clean up RST directives</li>
+</ul>
+</li>
+<li>
+<p><strong>General Tips</strong>:</p>
+<ul>
+<li>Check Pandoc version</li>
+<li>Verify input format</li>
+<li>Review error messages</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor" href="#next-steps">#</a></h2>
+<ol>
+<li>
+<p><strong>Expand Knowledge</strong>:</p>
+<ul>
+<li>Learn more about Eleventy</li>
+<li>Explore advanced Pandoc features</li>
+<li>Study CSS frameworks</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhance Project</strong>:</p>
+<ul>
+<li>Add more formats</li>
+<li>Improve styling</li>
+<li>Create custom plugins</li>
+</ul>
+</li>
+<li>
+<p><strong>Share and Collaborate</strong>:</p>
+<ul>
+<li>Document your journey</li>
+<li>Share improvements</li>
+<li>Help other learners</li>
+</ul>
+</li>
+</ol>
+<h2 id="resources-and-references" tabindex="-1">Resources and References <a class="anchor" href="#resources-and-references">#</a></h2>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html">Pandoc Documentation</a></li>
+<li><a href="https://www.11ty.dev/docs/">Eleventy Guide</a></li>
+<li><a href="https://www.markdownguide.org/">Markdown Reference</a></li>
+<li><a href="https://prismjs.com/">Prism.js Documentation</a></li>
+</ul>
+
+        </article>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-latex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+</body>
+</html>
