@@ -1,0 +1,35 @@
+# Sample Plain Text Document
+
+This is a simple plain text document that will be converted to Markdown.
+
+## Section 1: Introduction
+
+Plain text files can contain structured content using simple formatting
+conventions.
+
+Lists: 1. First item 2. Second item 3. Third item
+
+-   Bullet point 1
+-   Bullet point 2
+    -   Nested point
+    -   Another nested point
+
+## Code Example:
+
+Here's how we might format code in plain text:
+
+    function example() {
+        console.log("Hello from plain text!");
+    }
+
+## Tables (ASCII style):
+
+  --------------- ---------------
+  Column 1        Column 2
+
+  Value 1 Value 3 Value 2 Value 4
+  --------------- ---------------
+
+Links can be written like this: Visit: https://example.com
+
+Emphasis can be indicated with *asterisks* or *underscores*.

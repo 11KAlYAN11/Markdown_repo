@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/11KAlYAN11/Markdown_repo#readme",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it-prism": "^3.0.0"
   },
   "devDependencies": {
     "markdown-it": "^13.0.2",
