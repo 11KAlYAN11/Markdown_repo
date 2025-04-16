@@ -17,6 +17,7 @@ Your documentation should be written in Markdown format. Here are some common sy
 # Heading 1
 ## Heading 2
 ### Heading 3
+#### HEading 4
 
 - Bullet points
 - Another point

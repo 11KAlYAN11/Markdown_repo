@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming Guide</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Documentation</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="/">Welcome to the Documentation</a></li>
+                <li><a href="/content/guides/getting-started/">Getting Started with Documentation</a></li>
+                <li><a href="/content/guides/c-programming/">C Programming Guide</a></li>
+                <li><a href="/content/guides/cpp-programming/">C++ Programming Guide</a></li>
+                <li><a href="/content/guides/java-programming/">Java Programming Guide</a></li>
+                <li><a href="/content/guides/python-programming/">Python Programming Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="content">
+        <article>
+            <h1>C++ Programming Guide</h1>
+            <h1 id="c%2B%2B-programming-guide" tabindex="-1">C++ Programming Guide</h1>
+<h2 id="introduction-to-c%2B%2B" tabindex="-1">Introduction to C++</h2>
+<p>C++ is a powerful general-purpose programming language that extends C with object-oriented features. It's widely used in game development, system programming, and performance-critical applications.</p>
+<h2 id="core-features" tabindex="-1">Core Features</h2>
+<h3 id="1.-classes-and-objects" tabindex="-1">1. Classes and Objects</h3>
+<pre><code class="language-cpp">// Class definition
+class Person {
+private:
+    string name;
+    int age;
+    
+public:
+    // Constructor
+    Person(string n, int a) : name(n), age(a) {}
+    
+    // Member functions
+    void displayInfo() const {
+        cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; &quot;, Age: &quot; &lt;&lt; age &lt;&lt; endl;
+    }
+    
+    // Getter and setter
+    int getAge() const { return age; }
+    void setAge(int a) { age = a; }
+};
+
+// Using the class
+Person person(&quot;Alice&quot;, 25);
+person.displayInfo();
+</code></pre>
+<h3 id="2.-templates" tabindex="-1">2. Templates</h3>
+<pre><code class="language-cpp">// Function template
+template&lt;typename T&gt;
+T max(T a, T b) {
+    return (a &gt; b) ? a : b;
+}
+
+// Class template
+template&lt;typename T&gt;
+class Stack {
+private:
+    vector&lt;T&gt; elements;
+    
+public:
+    void push(T const&amp; elem) {
+        elements.push_back(elem);
+    }
+    
+    T pop() {
+        T top = elements.back();
+        elements.pop_back();
+        return top;
+    }
+};
+</code></pre>
+<h3 id="3.-stl-containers" tabindex="-1">3. STL Containers</h3>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+// Vector usage
+vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+numbers.push_back(6);
+
+// Map usage
+map&lt;string, int&gt; ages;
+ages[&quot;Alice&quot;] = 25;
+ages[&quot;Bob&quot;] = 30;
+
+// Range-based for loop
+for (const auto&amp; pair : ages) {
+    cout &lt;&lt; pair.first &lt;&lt; &quot;: &quot; &lt;&lt; pair.second &lt;&lt; endl;
+}
+</code></pre>
+<h3 id="4.-smart-pointers" tabindex="-1">4. Smart Pointers</h3>
+<pre><code class="language-cpp">#include &lt;memory&gt;
+
+// Unique pointer
+unique_ptr&lt;Person&gt; person1(new Person(&quot;Alice&quot;, 25));
+person1-&gt;displayInfo();
+
+// Shared pointer
+shared_ptr&lt;Person&gt; person2 = make_shared&lt;Person&gt;(&quot;Bob&quot;, 30);
+shared_ptr&lt;Person&gt; person3 = person2;  // Reference count = 2
+</code></pre>
+<h2 id="modern-c%2B%2B-features-(c%2B%2B11-and-beyond)" tabindex="-1">Modern C++ Features (C++11 and beyond)</h2>
+<h3 id="1.-auto-type-inference" tabindex="-1">1. Auto Type Inference</h3>
+<pre><code class="language-cpp">auto number = 42;        // int
+auto text = &quot;Hello&quot;;     // const char*
+auto pi = 3.14159;       // double
+
+// With lambda expressions
+auto lambda = [](int x) { return x * x; };
+</code></pre>
+<h3 id="2.-lambda-expressions" tabindex="-1">2. Lambda Expressions</h3>
+<pre><code class="language-cpp">vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+
+// Using lambda with algorithms
+auto sum = accumulate(numbers.begin(), numbers.end(), 0,
+    [](int total, int current) {
+        return total + current;
+    });
+
+// Capturing variables
+int multiplier = 10;
+auto multiply = [multiplier](int x) { return x * multiplier; };
+</code></pre>
+<h3 id="3.-move-semantics" tabindex="-1">3. Move Semantics</h3>
+<pre><code class="language-cpp">class Buffer {
+private:
+    int* data;
+    size_t size;
+
+public:
+    // Move constructor
+    Buffer(Buffer&amp;&amp; other) noexcept 
+        : data(other.data), size(other.size) {
+        other.data = nullptr;
+        other.size = 0;
+    }
+    
+    // Move assignment operator
+    Buffer&amp; operator=(Buffer&amp;&amp; other) noexcept {
+        if (this != &amp;other) {
+            delete[] data;
+            data = other.data;
+            size = other.size;
+            other.data = nullptr;
+            other.size = 0;
+        }
+        return *this;
+    }
+};
+</code></pre>
+<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<ol>
+<li>Use RAII (Resource Acquisition Is Initialization)</li>
+<li>Prefer smart pointers over raw pointers</li>
+<li>Use const whenever possible</li>
+<li>Leverage STL algorithms and containers</li>
+<li>Follow the Rule of Five/Zero</li>
+</ol>
+<h2 id="common-idioms" tabindex="-1">Common Idioms</h2>
+<h3 id="1.-raii-pattern" tabindex="-1">1. RAII Pattern</h3>
+<pre><code class="language-cpp">class FileHandler {
+private:
+    FILE* file;
+    
+public:
+    FileHandler(const char* filename) {
+        file = fopen(filename, &quot;r&quot;);
+    }
+    
+    ~FileHandler() {
+        if (file) {
+            fclose(file);
+        }
+    }
+};
+</code></pre>
+<h3 id="2.-pimpl-idiom" tabindex="-1">2. Pimpl Idiom</h3>
+<pre><code class="language-cpp">// Header file
+class Widget {
+private:
+    class Impl;
+    unique_ptr&lt;Impl&gt; pimpl;
+    
+public:
+    Widget();
+    ~Widget();
+    void doSomething();
+};
+
+// Implementation file
+class Widget::Impl {
+    // Implementation details
+};
+</code></pre>
+<h2 id="exception-handling" tabindex="-1">Exception Handling</h2>
+<pre><code class="language-cpp">try {
+    vector&lt;int&gt; vec;
+    vec.at(5) = 10;  // Will throw out_of_range
+} catch (const out_of_range&amp; e) {
+    cerr &lt;&lt; &quot;Out of range error: &quot; &lt;&lt; e.what() &lt;&lt; endl;
+} catch (...) {
+    cerr &lt;&lt; &quot;Unknown error occurred&quot; &lt;&lt; endl;
+}</code></pre>
+
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Guide</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Documentation</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="/">Welcome to the Documentation</a></li>
+                <li><a href="/content/guides/getting-started/">Getting Started with Documentation</a></li>
+                <li><a href="/content/guides/c-programming/">C Programming Guide</a></li>
+                <li><a href="/content/guides/cpp-programming/">C++ Programming Guide</a></li>
+                <li><a href="/content/guides/java-programming/">Java Programming Guide</a></li>
+                <li><a href="/content/guides/python-programming/">Python Programming Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="content">
+        <article>
+            <h1>Java Programming Guide</h1>
+            <h1 id="java-programming-guide" tabindex="-1">Java Programming Guide</h1>
+<h2 id="introduction-to-java" tabindex="-1">Introduction to Java</h2>
+<p>Java is a class-based, object-oriented programming language designed to be platform-independent through the Java Virtual Machine (JVM). It follows the principle of &quot;Write Once, Run Anywhere.&quot;</p>
+<h2 id="core-concepts" tabindex="-1">Core Concepts</h2>
+<h3 id="1.-object-oriented-programming" tabindex="-1">1. Object-Oriented Programming</h3>
+<pre><code class="language-java">// Class definition with inheritance
+public class Animal {
+    protected String name;
+    
+    public Animal(String name) {
+        this.name = name;
+    }
+    
+    public void makeSound() {
+        System.out.println(&quot;Some sound&quot;);
+    }
+}
+
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+    
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Woof!&quot;);
+    }
+}
+</code></pre>
+<h3 id="2.-interfaces-and-abstract-classes" tabindex="-1">2. Interfaces and Abstract Classes</h3>
+<pre><code class="language-java">// Interface
+public interface Flyable {
+    void fly();
+    default void glide() {
+        System.out.println(&quot;Gliding...&quot;);
+    }
+}
+
+// Abstract class
+public abstract class Bird implements Flyable {
+    protected String species;
+    
+    public Bird(String species) {
+        this.species = species;
+    }
+    
+    abstract void sing();
+}
+</code></pre>
+<h3 id="3.-collections-framework" tabindex="-1">3. Collections Framework</h3>
+<pre><code class="language-java">import java.util.*;
+
+// List example
+List&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add(&quot;Alice&quot;);
+names.add(&quot;Bob&quot;);
+
+// Map example
+Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put(&quot;Alice&quot;, 95);
+scores.put(&quot;Bob&quot;, 87);
+
+// Stream API usage
+int totalScore = scores.values().stream()
+    .mapToInt(Integer::intValue)
+    .sum();
+
+// Using Optional
+Optional&lt;String&gt; topStudent = scores.entrySet().stream()
+    .max(Map.Entry.comparingByValue())
+    .map(Map.Entry::getKey);
+</code></pre>
+<h3 id="4.-exception-handling" tabindex="-1">4. Exception Handling</h3>
+<pre><code class="language-java">public class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+public void processFile(String path) throws CustomException {
+    try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            // Process line
+        }
+    } catch (IOException e) {
+        throw new CustomException(&quot;Error reading file: &quot; + e.getMessage());
+    }
+}
+</code></pre>
+<h2 id="modern-java-features" tabindex="-1">Modern Java Features</h2>
+<h3 id="1.-lambda-expressions" tabindex="-1">1. Lambda Expressions</h3>
+<pre><code class="language-java">// Function interface
+@FunctionalInterface
+interface Calculator {
+    int calculate(int x, int y);
+}
+
+// Using lambda
+Calculator add = (x, y) -&gt; x + y;
+Calculator multiply = (x, y) -&gt; x * y;
+
+// With collections
+List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;);
+names.forEach(name -&gt; System.out.println(&quot;Hello, &quot; + name));
+</code></pre>
+<h3 id="2.-records-(java-16%2B)" tabindex="-1">2. Records (Java 16+)</h3>
+<pre><code class="language-java">public record Person(String name, int age) {
+    // Compact constructor
+    public Person {
+        if (age &lt; 0) {
+            throw new IllegalArgumentException(&quot;Age cannot be negative&quot;);
+        }
+    }
+    
+    // Additional methods
+    public boolean isAdult() {
+        return age &gt;= 18;
+    }
+}
+</code></pre>
+<h3 id="3.-pattern-matching-(java-17%2B)" tabindex="-1">3. Pattern Matching (Java 17+)</h3>
+<pre><code class="language-java">public String getTypeDescription(Object obj) {
+    return switch (obj) {
+        case String s -&gt; &quot;Text of length &quot; + s.length();
+        case Integer i -&gt; &quot;Number: &quot; + i;
+        case Person p -&gt; &quot;Person named &quot; + p.name();
+        case null -&gt; &quot;Null object&quot;;
+        default -&gt; &quot;Unknown type&quot;;
+    };
+}
+</code></pre>
+<h2 id="concurrency" tabindex="-1">Concurrency</h2>
+<h3 id="1.-thread-management" tabindex="-1">1. Thread Management</h3>
+<pre><code class="language-java">// Using Runnable
+Runnable task = () -&gt; {
+    System.out.println(&quot;Running in thread: &quot; + 
+        Thread.currentThread().getName());
+};
+new Thread(task).start();
+
+// Using ExecutorService
+ExecutorService executor = Executors.newFixedThreadPool(4);
+Future&lt;String&gt; future = executor.submit(() -&gt; &quot;Task result&quot;);
+</code></pre>
+<h3 id="2.-synchronization" tabindex="-1">2. Synchronization</h3>
+<pre><code class="language-java">public class SafeCounter {
+    private AtomicInteger count = new AtomicInteger(0);
+    
+    public void increment() {
+        count.incrementAndGet();
+    }
+    
+    public synchronized void synchronizedMethod() {
+        // Thread-safe code
+    }
+    
+    public void lockExample() {
+        Lock lock = new ReentrantLock();
+        lock.lock();
+        try {
+            // Critical section
+        } finally {
+            lock.unlock();
+        }
+    }
+}
+</code></pre>
+<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<ol>
+<li>
+<p>Follow naming conventions</p>
+<ul>
+<li>Classes: PascalCase</li>
+<li>Methods/Variables: camelCase</li>
+<li>Constants: UPPER_SNAKE_CASE</li>
+</ul>
+</li>
+<li>
+<p>Use proper access modifiers</p>
+<ul>
+<li>private for implementation details</li>
+<li>protected for inheritance</li>
+<li>public for API</li>
+</ul>
+</li>
+<li>
+<p>Handle resources properly</p>
+<pre><code class="language-java">try (Resource resource = new Resource()) {
+    // Use resource
+} // Auto-closed
+</code></pre>
+</li>
+<li>
+<p>Use builders for complex objects</p>
+<pre><code class="language-java">Person person = Person.builder()
+    .name(&quot;John&quot;)
+    .age(25)
+    .address(&quot;123 Street&quot;)
+    .build();
+</code></pre>
+</li>
+</ol>
+<h2 id="testing-with-junit" tabindex="-1">Testing with JUnit</h2>
+<pre><code class="language-java">@Test
+void testAddition() {
+    Calculator calc = new Calculator();
+    assertEquals(4, calc.add(2, 2), &quot;2 + 2 should equal 4&quot;);
+}
+
+@Test
+void testExceptionThrown() {
+    assertThrows(IllegalArgumentException.class, () -&gt; {
+        new Person(&quot;Test&quot;, -1);
+    });
+}</code></pre>
+
+        </article>
+    </main>
+</body>
+</html>
