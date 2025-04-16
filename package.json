@@ -1,0 +1,34 @@
+{
+  "name": "markdown_repo",
+  "version": "1.0.0",
+  "description": "Documentation site built with Eleventy and Markdown",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site/",
+    "convert": "node scripts/pandoc-convert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11KAlYAN11/Markdown_repo.git"
+  },
+  "keywords": [
+    "documentation",
+    "markdown",
+    "static-site"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/11KAlYAN11/Markdown_repo/issues"
+  },
+  "homepage": "https://github.com/11KAlYAN11/Markdown_repo#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "devDependencies": {
+    "markdown-it": "^13.0.2",
+    "markdown-it-anchor": "^8.6.7"
+  }
+}
